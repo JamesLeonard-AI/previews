@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- noindex asks search engines not to list this page. It is NOT access control: anyone with the URL can view it. -->
+  <meta name="description" content="Website design concept for Bryan Atwood Roofing. Not an official business website." />
+  <meta name="theme-color" content="#18251e" />
+  <title>Bryan Atwood Roofing — Design Concept by Lock On Digital</title>
+  <style>
+    :root { --dark:#18251e; --orange:#d87843; --gold:#f1c891; --ink:#1d2a25; --smoke:#4d5c54; --beige:#f6f2eb; --cream:#fffdf9; --line:#dedfd5; --radius:16px; --photo:url('../assets/hero-roofing.jpg'); }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; line-height:1.5; background:var(--beige); color:var(--ink); -webkit-font-smoothing:antialiased; }
+    button,input,textarea,select { font:inherit; }
+    button { cursor:pointer; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1200px, calc(100% - 80px)); margin-inline:auto; }
+    .concept-bar { background:#f5e8d8; color:#3e3026; border-bottom:1px solid #e0c8ac; padding:9px 0; font-size:11px; letter-spacing:.055em; }
+    .concept-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .concept-bar strong { font-weight:800; }
+    .concept-bar a { color:#784217; font-weight:700; white-space:nowrap; }
+    .concept-flag { display:flex; align-items:center; gap:8px; }
+    .concept-dot { width:7px; height:7px; border-radius:50%; background:#d87843; flex-shrink:0; }
+    .site-header { position:relative; z-index:10; background:var(--dark); color:#fff; }
+    .header-inner { min-height:87px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; min-width:220px; }
+    .brand-symbol { width:38px; height:38px; border:1px solid rgba(255,255,255,.43); display:grid; place-items:center; transform:rotate(45deg); border-radius:3px; }
+    .brand-symbol svg { width:26px; height:26px; transform:rotate(-45deg); }
+    .brand-title { font-weight:850; font-size:20px; line-height:.9; letter-spacing:.085em; }
+    .brand-subtitle { display:block; font-size:8px; letter-spacing:.32em; margin-top:9px; opacity:.75; }
+    .nav { display:flex; align-items:center; gap:36px; font-size:13px; font-weight:600; }
+    .nav a { color:#d6dfd9; transition:color .2s; }
+    .nav a:hover { color:#fff; }
+    .header-cta { display:flex; align-items:center; justify-content:center; gap:10px; background:var(--orange); padding:13px 19px; font-size:13px; font-weight:800; color:#fff; border-radius:4px; white-space:nowrap; }
+    .header-cta svg { width:16px; height:16px; }
+    .menu-toggle { display:none; color:white; border:0; background:none; padding:10px; }
+    .hero { min-height:650px; overflow:hidden; position:relative; color:#fff; display:flex; align-items:center; background-color:#253d32; background-image:linear-gradient(90deg, rgba(8,22,17,.96) 0%,rgba(8,22,17,.91) 31%,rgba(8,22,17,.57) 58%,rgba(8,22,17,.15) 100%),var(--photo); background-size:cover; background-position:center center; }
+    .hero::after { content:""; position:absolute; bottom:0; left:0; right:0; height:35%; background:linear-gradient(transparent, rgba(10,25,17,.23)); pointer-events:none; }
+    .hero-inner { position:relative; z-index:1; padding:83px 0 120px; }
+    .kicker { display:flex; align-items:center; gap:12px; letter-spacing:.23em; text-transform:uppercase; font-weight:800; font-size:11px; }
+    .kicker::before { content:""; width:26px; height:2px; background:var(--orange); flex:none; }
+    .hero h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(52px,5.8vw,88px); line-height:1.02; letter-spacing:-.04em; font-weight:400; max-width:760px; margin:29px 0 26px; }
+    .hero .summary { max-width:540px; font-size:18px; line-height:1.75; color:#e2e6e1; margin:0; }
+    .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:25px; margin-top:38px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:18px; border-radius:5px; border:1px solid transparent; padding:17px 22px; font-weight:800; font-size:13px; letter-spacing:.015em; transition:transform .2s,background .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:var(--orange); color:#fff; }
+    .btn-primary:hover { background:#bd5e2b; }
+    .btn-text { color:#fff; padding-left:0; padding-right:0; border-bottom:1px solid rgba(255,255,255,.4); border-radius:0; }
+    .arrow { width:18px; height:18px; }
+    .hero-footnote { display:flex; align-items:center; gap:9px; color:#cfdbd2; font-size:11px; margin-top:45px; letter-spacing:.025em; }
+    .hero-footnote svg { width:16px; height:16px; }
+    .specimen-photo-note { position:absolute; bottom:25px; right:20px; color:rgba(255,255,255,.75); font-size:10px; z-index:2; letter-spacing:.02em; }
+    .benefits-shell { position:relative; z-index:3; margin-top:-52px; }
+    .benefits { display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border:1px solid #e7e1d6; border-radius:8px; box-shadow:0 15px 40px rgba(14,26,20,.08); }
+    .benefit { display:flex; align-items:center; gap:16px; padding:24px 30px; }
+    .benefit+.benefit { border-left:1px solid #e7e1d6; }
+    .benefit-icon { display:grid; place-items:center; color:#b96e42; border:1px solid #dfc4ab; border-radius:50%; width:42px; height:42px; flex:none; }
+    .benefit-icon svg { width:19px; height:19px; }
+    .benefit strong { display:block; font-size:13px; }
+    .benefit small { display:block; color:#89918b; margin-top:4px; font-size:11px; }
+    section { scroll-margin-top:30px; }
+    .section-pad { padding:120px 0; }
+    .section-label { display:flex; align-items:center; gap:12px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; font-weight:850; color:#b76337; }
+    .section-label::before { content:""; display:block; width:30px; height:2px; background:#b76337; }
+    h2 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(38px,4.25vw,61px); font-weight:400; letter-spacing:-.043em; line-height:1.13; }
+    .section-heading { display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:46px; }
+    .section-heading h2 { max-width:680px; margin:21px 0 0; }
+    .section-heading p { max-width:315px; color:#617168; line-height:1.75; font-size:14px; margin:0 0 6px; }
+    .services-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .service { display:flex; flex-direction:column; background:var(--cream); border:1px solid #e4dfd5; border-radius:9px; min-height:340px; padding:26px 26px 28px; transition:box-shadow .2s,transform .2s; }
+    .service:hover { transform:translateY(-4px); box-shadow:0 15px 30px rgba(25,41,30,.07); }
+    .service-top { display:flex; justify-content:space-between; align-items:center; }
+    .service-number { color:#a7aea6; font-size:12px; font-weight:750; }
+    .service-icon { width:56px; height:56px; border-radius:13px; display:grid; place-items:center; background:#f1e9df; color:#b56135; margin-top:41px; }
+    .service-icon svg { width:26px; height:26px; stroke-width:1.6; }
+    .service h3 { font-size:19px; letter-spacing:-.02em; margin:27px 0 10px; line-height:1.25; }
+    .service p { font-size:13px; color:#69776e; line-height:1.7; margin:0; }
+    .story { background:#1c2c23; color:#fff; overflow:hidden; }
+    .story-wrap { display:grid; grid-template-columns:1fr 1.02fr; min-height:590px; }
+    .story-visual { background:linear-gradient(0deg,rgba(15,31,20,.52),rgba(15,31,20,.15)),var(--photo) center/cover; position:relative; min-height:460px; }
+    .story-visual::after { content:attr(data-caption); position:absolute; bottom:36px; left:38px; font-family:Georgia,serif; color:#fff; font-size:clamp(25px,3vw,40px); max-width:390px; line-height:1.16; }
+    .story-content { padding:85px min(6vw,104px) 80px; }
+    .story-content .section-label { color:#f0b481; }
+    .story-content .section-label::before { background:#f0b481; }
+    .story-content h2 { margin:28px 0 23px; font-size:clamp(38px,4vw,62px); }
+    .story-content > p { font-size:14px; line-height:1.85; color:#cad6ce; max-width:510px; }
+    .steps { margin-top:34px; }
+    .step { display:grid; grid-template-columns:46px 1fr; gap:16px; padding:16px 0; border-top:1px solid rgba(255,255,255,.16); }
+    .step span { font-size:13px; font-weight:750; color:#f0b481; }
+    .step strong { display:block; font-size:14px; }
+    .step p { font-size:12px; color:#b4c3b7; margin:4px 0 0; line-height:1.6; }
+    .wide-cta { background:#e8decf; padding:62px 0; }
+    .wide-cta .container { display:flex; align-items:center; justify-content:space-between; gap:35px; }
+    .wide-cta .statement { font-family:Georgia,serif; font-size:clamp(27px,3vw,40px); line-height:1.18; max-width:740px; letter-spacing:-.025em; }
+    .wide-cta .statement em { color:#a95c37; font-style:normal; }
+    .estimate { background:#f7f4ed; }
+    .estimate-grid { display:grid; grid-template-columns:.8fr 1fr; gap:100px; align-items:start; }
+    .estimate-copy h2 { margin:20px 0 22px; }
+    .estimate-copy p { color:#647166; line-height:1.75; max-width:420px; font-size:15px; }
+    .location-chip { display:inline-flex; align-items:center; gap:8px; font-size:12px; padding:11px 15px; border:1px solid #d8dcd3; margin-top:22px; background:#fff; border-radius:20px; }
+    .demo-form { background:#fff; padding:34px; border:1px solid #e5e0d5; border-radius:10px; box-shadow:0 16px 35px rgba(19,39,27,.06); }
+    .form-top { display:flex; justify-content:space-between; gap:12px; align-items:center; padding-bottom:22px; margin-bottom:22px; border-bottom:1px solid #e5e1d9; }
+    .form-top strong { font-size:16px; }
+    .demo-label { color:#9a6b49; background:#fcf0e5; font-size:10px; font-weight:800; padding:6px 9px; border-radius:4px; white-space:nowrap; }
+    label { font-size:12px; font-weight:750; display:block; margin-bottom:9px; }
+    .field { display:block; width:100%; background:#fbfaf7; border:1px solid #dadfd9; border-radius:5px; padding:15px 14px; outline:0; color:#203329; font-size:13px; }
+    .field:focus { border-color:#a75b2f; box-shadow:0 0 0 3px rgba(205,108,53,.1); }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
+    .form-row { margin-bottom:18px; }
+    .form-button { width:100%; justify-content:space-between; margin-top:3px; }
+    .form-foot { font-size:11px; color:#6f796f; margin:14px 0 0; }
+    .form-status { display:none; margin-top:12px; padding:12px 14px; font-size:12px; border-radius:5px; background:#f9e7d7; color:#75421c; }
+    .form-status.visible { display:block; }
+    .foot { background:#142119; color:#d8e0d8; padding:48px 0 30px; }
+    .footer-main { display:flex; justify-content:space-between; align-items:center; gap:28px; padding-bottom:35px; border-bottom:1px solid rgba(255,255,255,.13); }
+    .footer-main p { color:#a5b5a9; font-size:12px; margin:13px 0 0; }
+    .footer-bottom { padding-top:24px; display:flex; justify-content:space-between; font-size:11px; color:#9cb0a1; gap:15px; }
+    .footer-bottom a { color:#efad78; text-decoration:underline; }
+    @media(max-width:1060px) { .container{width:min(100% - 48px,1200px)} .nav{gap:18px} .services-grid{grid-template-columns:repeat(2,1fr)} .service{min-height:290px} .story-content{padding:70px 50px} .estimate-grid{gap:40px} }
+    @media(max-width:760px) {
+      .concept-row{align-items:start} .concept-bar { font-size:10px; } .concept-bar a { display:none; }
+      .container{width:calc(100% - 36px)} .header-inner{min-height:70px} .brand{min-width:0} .brand-symbol{width:32px;height:32px} .brand-title{font-size:17px} .brand-subtitle{font-size:7px}
+      .header-cta {margin-left:auto; padding:11px 12px;font-size:11px} .header-cta svg{display:none} .menu-toggle{display:block}
+      .nav { position:absolute; top:100%; left:0; right:0; background:#1a2c20; padding:14px 20px 24px; display:none; flex-direction:column; align-items:stretch; gap:0; border-top:1px solid rgba(255,255,255,.15); }
+      .nav.open { display:flex; } .nav a { padding:13px 7px; border-bottom:1px solid rgba(255,255,255,.13); }
+      .hero { min-height:635px; background-image:linear-gradient(90deg,rgba(8,22,17,.9) 0%,rgba(8,22,17,.75) 58%,rgba(8,22,17,.42) 100%),var(--photo); background-position:61% center; }
+      .hero-inner{padding:90px 0 128px} .hero h1{font-size:clamp(44px,10vw,62px);max-width:520px;margin-top:25px} .hero .summary{font-size:15px;max-width:380px;line-height:1.75}
+      .hero-actions{gap:17px;margin-top:27px} .btn{padding:15px 18px} .hero-footnote{margin-top:33px} .specimen-photo-note{font-size:9px;right:16px;bottom:15px}
+      .benefits-shell{margin-top:-64px} .benefits{grid-template-columns:1fr;gap:0} .benefit{padding:14px 18px} .benefit+.benefit{border-left:0;border-top:1px solid #e7e1d6} .benefit-icon{width:36px;height:36px} .benefit small{margin-top:0}
+      .section-pad{padding:76px 0} .section-heading{display:block;margin-bottom:32px} .section-heading p{margin-top:15px;max-width:100%} h2{font-size:clamp(35px,9vw,48px)} .services-grid{grid-template-columns:1fr 1fr;gap:10px} .service{padding:18px;min-height:240px} .service-icon{margin-top:20px;width:46px;height:46px} .service h3{margin:20px 0 7px;font-size:15px} .service p{font-size:12px}
+      .story-wrap{grid-template-columns:1fr} .story-visual{min-height:360px} .story-visual::after{left:20px;bottom:28px} .story-content{padding:61px 24px} .story-content h2{font-size:42px}
+      .wide-cta{padding:46px 0} .wide-cta .container{display:block} .wide-cta .btn{margin-top:24px}
+      .estimate-grid{grid-template-columns:1fr;gap:31px} .estimate-copy h2{margin-bottom:15px} .demo-form{padding:23px} .foot{padding-top:40px} .footer-main{display:block} .footer-main .brand{margin-bottom:16px} .footer-bottom{flex-direction:column;gap:6px}
+    }
+    @media(max-width:420px){.header-cta{display:none}.hero h1{font-size:46px}.hero{min-height:610px}.services-grid{grid-template-columns:1fr}.service{min-height:0}.fields{grid-template-columns:1fr;gap:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.service{transition:none}}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .category-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:12px}
+    .contact-lines{display:flex;flex-direction:column;gap:8px;margin-top:22px}
+    .contact-lines a{font-weight:700;color:var(--dark);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:6px;width:fit-content}
+    .verified-claims{list-style:none;padding:0;margin:18px 0 0;font-size:14px;color:var(--smoke)}
+    .verified-claims li{margin-bottom:6px}.verified-claims a{color:inherit}
+  </style>
+</head>
+<body>
+  <div class="concept-bar"><div class="container concept-row"><span class="concept-flag"><span class="concept-dot"></span><strong>LOCK ON DIGITAL</strong> · UNOFFICIAL WEBSITE CONCEPT · NOT A LIVE BUSINESS SITE</span><a href="https://getlockon.com" target="_blank" rel="noopener noreferrer">Made by Lock On Digital ↗</a></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Bryan Atwood Roofing concept homepage"><span class="brand-symbol"><svg viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22L16 7l12 15M10 24V17l6-7 6 7v7M8 26h16"/></svg></span><span><span class="brand-title">BRYAN ATWOOD ROOFING</span><span class="brand-subtitle">CONCEPT</span></span></a>
+    <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="#services">Services</a><a href="#approach">How it works</a><a href="#estimate">Contact</a></nav>
+    <a href="#estimate" class="header-cta">Request an estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></a>
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div></header>
+  <main id="top">
+    <section class="hero" aria-label="Intro"><span class="sr-only" role="img" aria-label="Illustrative roofing photo; example concept photography, not the company&#x27;s actual work"></span><div class="container hero-inner">
+      <div class="category-label">Construction &amp; specialty trades</div>
+      <div class="kicker">LOCAL CRAFTSMANSHIP <span aria-hidden="true">·</span> Altavista, VA</div>
+      <h1>Quality work for Altavista homes and businesses.</h1>
+      <p class="summary">Bryan Atwood Roofing offers roof replacement, roof repair, gutters in Altavista and the surrounding area.</p>
+      <div class="hero-actions"><a href="#estimate" class="btn btn-primary">Start your project <span aria-hidden="true">↗</span></a><a href="#services" class="btn btn-text">Explore our services <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-footnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-8.2 8-13a8 8 0 1 0-16 0c0 4.8 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Altavista, VA</div>
+    </div><div class="specimen-photo-note">Illustrative concept photography · not actual completed work</div></section>
+    <div class="container benefits-shell"><div class="benefits"><div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8v9H3z"/><path d="M9 20v-6h6v6"/></svg></span><span><strong>Clear first steps</strong></span></div><div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h7v7h-7z"/></svg></span><span><strong>Straightforward communication</strong></span></div><div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg></span><span><strong>Local service</strong></span></div></div></div>
+    <section id="services" class="section-pad"><div class="container">
+      <div class="section-heading"><div><div class="section-label">WHAT WE DO</div><h2>The work you need, done with care.</h2></div><p>Find the service that fits your project and tell us what you have in mind.</p></div>
+      <div class="services-grid"><article class="service"><div class="service-top"><span class="service-number">01</span><span aria-hidden="true">↗</span></div><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8v9H3z"/><path d="M9 20v-6h6v6"/></svg></span><h3>Roof replacement</h3></article><article class="service"><div class="service-top"><span class="service-number">02</span><span aria-hidden="true">↗</span></div><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h7v7h-7z"/></svg></span><h3>Roof repair</h3></article><article class="service"><div class="service-top"><span class="service-number">03</span><span aria-hidden="true">↗</span></div><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg></span><h3>Gutters</h3></article><article class="service"><div class="service-top"><span class="service-number">04</span><span aria-hidden="true">↗</span></div><span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 20 8-8m-2-7 3-3 7 7-3 3-7-7M4 22l-2-2 12-12 2 2z"/></svg></span><h3>Roof inspections</h3></article></div>
+    </div></section>
+    <section class="story" id="approach"><div class="story-wrap"><div class="story-visual" data-caption="BUILT AROUND YOUR PROJECT." role="img" aria-label="Illustrative roofing photo; example concept photography, not the company&#x27;s actual work"></div><div class="story-content">
+      <div class="section-label">HOW IT WORKS</div><h2>A good project starts with a simple conversation.</h2><p>Tell us what you are planning, and we will talk through the job, the timeline, and the best next step.</p><div class="steps"><div class="step"><span>01</span><div><strong>Share your idea</strong><p>Pick the type of project and add a few details.</p></div></div><div class="step"><span>02</span><div><strong>Talk it through</strong><p>Discuss the scope, the timeline, and what matters most to you.</p></div></div><div class="step"><span>03</span><div><strong>Plan the work</strong><p>Agree on the next step and get started.</p></div></div></div>
+    </div></div></section>
+    <section class="wide-cta"><div class="container"><div class="statement">Your next project starts with <em>one conversation.</em></div><a class="btn btn-primary" href="#estimate">Tell us what you&#x27;re planning <span aria-hidden="true">↗</span></a></div></section>
+    <section id="estimate" class="estimate section-pad"><div class="container estimate-grid">
+      <div class="estimate-copy"><div class="section-label">GET IN TOUCH</div><h2>Let&#x27;s talk about your next project.</h2><p>Here is how a customer&#x27;s first contact could look on a live site.</p><span class="location-chip">⌖ &nbsp; Altavista, VA</span><div class="contact-lines"><a href="tel:+14343694270">(434) 369-4270</a></div></div>
+      <div><form id="demo-form" class="demo-form" novalidate data-demo-only="true"><div class="form-top"><strong>Project inquiry</strong><span class="demo-label">INTERACTIVE DEMO</span></div>
+        <div class="fields"><div><label for="demo-name">Your name</label><input id="demo-name" class="field" placeholder="Your name" autocomplete="off" /></div><div><label for="demo-email">Email address</label><input id="demo-email" type="email" class="field" placeholder="you@example.com" autocomplete="off" /></div></div>
+        <div class="form-row"><label for="demo-project">What kind of project?</label><select id="demo-project" class="field"><option value="">Select a project type</option><option value="Roof replacement">Roof replacement</option><option value="Roof repair">Roof repair</option><option value="Gutters">Gutters</option><option value="Roof inspections">Roof inspections</option></select></div>
+        <div class="form-row"><label for="demo-details">A little about your project</label><textarea id="demo-details" class="field" rows="4" placeholder="Describe the work you have in mind..."></textarea></div>
+        <button class="btn btn-primary form-button" type="submit">See how the inquiry works <span aria-hidden="true">↗</span></button>
+        <div id="form-status" class="form-status" role="status" aria-live="polite">This is a design preview. Nothing was saved, collected, or sent. A live site could connect this form to the business's inbox or automation.</div>
+        <p class="form-foot">Design concept only. Please don't enter real personal information; this form sends nothing.</p>
+      </form></div>
+    </div></section>
+  </main>
+  <footer class="foot"><div class="container"><div class="footer-main"><div><a href="#top" class="brand"><span class="brand-symbol"><svg viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22L16 7l12 15M10 24V17l6-7 6 7v7M8 26h16"/></svg></span><span><span class="brand-title">BRYAN ATWOOD ROOFING</span><span class="brand-subtitle">CONCEPT</span></span></a><p>Unofficial design concept prepared by Lock On Digital. Not affiliated with or endorsed by the business. Images are illustrative. The form sends nothing.</p></div><a class="btn btn-primary" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>© <span id="current-year">2026</span> · Bryan Atwood Roofing concept · Altavista, VA</span><span>Design study prepared by <a href="https://getlockon.com" target="_blank" rel="noopener noreferrer">Lock On Digital</a> — not an official website.</span></div></div></footer>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const menuButton=document.getElementById('menu-toggle');
+    const menu=document.getElementById('site-nav');
+    menuButton.addEventListener('click',()=>{let open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});
+    menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
+    document.getElementById('demo-form').addEventListener('submit',event=>{event.preventDefault();document.getElementById('form-status').classList.add('visible');});
+  </script>
+</body></html>
